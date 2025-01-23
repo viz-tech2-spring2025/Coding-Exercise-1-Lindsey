@@ -13,3 +13,5 @@ git add -A // add all of the files that have changed
 
 git commit -m "your custom message to yourself"
 
+git push origin main // uploading your changes to the cloud
+
