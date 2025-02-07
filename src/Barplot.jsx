@@ -13,10 +13,10 @@ export function Chart({ data }) {
 
   // Filter and process the data
   const numericData = data
-    .filter((d) => d["2010"] != null) //filter out countries with null for this year
+    .filter((d) => d["2023"] != null) //filter out countries with null for this year
     .map((d) => ({
       country: d["Country Name"],
-      value: +d["2010"],
+      value: +d["2023"],
     })).sort((a,b) => b.value - a.value).slice(0,50); //get top 50 countries 
 
   const max = d3.max(numericData, (d) => d.value);
@@ -58,7 +58,7 @@ export function Chart({ data }) {
   return (
     <div>
       <p style={{ fontWeight: "bold" }}>
-        Top 50 Urban Population Scores (2010)
+        Top 50 Urban Population Scores (2023)
       </p>
       <svg style={{ border: "1px solid black" }} width={width} height={height}>
         {/* Background bars (light grey, full width to represent 100%) */}
